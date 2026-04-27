@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galerie | Dracheschw&auml;nz</title>
+  <title>Repertoire | Dracheschw&auml;nz</title>
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
-<body data-page="gallery">
+<body data-page="videos">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Dracheschwaenz Start"><img src="img/logo2.png" alt="Dracheschwaenz Chriens" class="brand__logo"></a>
     <button class="nav-toggle" type="button" aria-label="Navigation oeffnen" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
@@ -31,37 +31,39 @@
 
   <main>
     <section class="page-hero">
-      <img src="img/gruppen-foto.png" alt="Fasnachtsstimmung der Dracheschwaenz">
+      <img src="img/auftritt.png" alt="Repertoire der Dracheschwaenz">
       <div>
-        <p class="overline">Galerie</p>
-        <h1>Stimmung, Farbe und Fasnacht</h1>
+        <p class="overline">Videos der Fasnacht</p>
+        <h1>Repertoire</h1>
       </div>
     </section>
 
-    <section class="section gallery-section">
-      <p class="lead">Die offizielle Seite lebt von authentischen Fotos. Diese Galerie nutzt die vorhandenen Bilder und gibt dem Prototyp echte Vereinsstimmung statt Platzhalter-Flaechen.</p>
-      <div class="gallery-grid">
-        <button class="gallery-item gallery-item--large" type="button" data-lightbox="img/gruppen-foto.png" data-caption="Dracheschwaenz Chriens">
-          <img src="img/gruppen-foto.png" alt="Dracheschwaenz Chriens">
-          <span>Gruppe</span>
-        </button>
-        <button class="gallery-item" type="button" data-lightbox="img/auftritt.png" data-caption="Auftritt">
-          <img src="img/auftritt.png" alt="Auftritt">
-          <span>Auftritt</span>
-        </button>
-        <button class="gallery-item" type="button" data-lightbox="img/probe.png" data-caption="Probe">
-          <img src="img/probe.png" alt="Probe">
-          <span>Probe</span>
-        </button>
+    <section class="section video-section">
+      <div class="video-grid">
+        <article class="video-card"><button type="button" aria-label="Video Altes Fieber abspielen"><span></span></button><h2>Altes Fieber</h2><p>Die Toten Hosen</p></article>
+        <article class="video-card"><button type="button" aria-label="Video Euphoria abspielen"><span></span></button><h2>Euphoria</h2><p>Loreen</p></article>
+        <article class="video-card"><button type="button" aria-label="Video Eye of the Tiger abspielen"><span></span></button><h2>Eye of the Tiger</h2><p>Survivor</p></article>
+        <article class="video-card"><button type="button" aria-label="Video Sweet Caroline abspielen"><span></span></button><h2>Sweet Caroline</h2><p>Neil Diamond</p></article>
+      </div>
+
+      <div class="repertoire-list">
+        <h2>Weitere Stuecke</h2>
+        <ul>
+          <li>Medley: We Will Rock You, Let Me Entertain You, 7 Nation Army, Still Fly</li>
+          <li>Die kleine Kneipe - Peter Alexander</li>
+          <li>You Give Love a Bad Name - Bon Jovi</li>
+          <li>Schwan - Goelae</li>
+          <li>Alles nur geklaut - Die Prinzen</li>
+          <li>Forever Young - Alphaville</li>
+          <li>Hollywood Hills - Sunrise Avenue</li>
+          <li>Ohne dich - Muenchner Freiheit</li>
+          <li>Tage wie diese - Die Toten Hosen</li>
+          <li>Pompeii - Bastille</li>
+          <li>San Francisco - Scott McKenzie</li>
+        </ul>
       </div>
     </section>
   </main>
-
-  <div class="lightbox" aria-hidden="true" data-lightbox-modal>
-    <button class="lightbox__close" type="button" aria-label="Bild schliessen" data-lightbox-close>x</button>
-    <img src="img/gruppen-foto.png" alt="" data-lightbox-image>
-    <p data-lightbox-caption></p>
-  </div>
 
   <footer class="site-footer"><p>&copy; 2021 Dracheschw&auml;nz Chriens</p><a href="join.html">Mitglied werden</a><a href="mailto:dracheschwaenz@gmail.com">Kontakt</a></footer>
 </body>

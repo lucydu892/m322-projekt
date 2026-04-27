@@ -1,76 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Agenda – Drachenschwänz</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda | Dracheschw&auml;nz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
-
-<body class="bg-slate-950 text-white font-sans">
-
-<nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between">
-        <a href="index.html" class="text-xl font-bold tracking-wide text-orange-400">Drachenschwänz</a>
-        <div class="flex flex-wrap gap-4 text-sm md:text-base">
-            <a href="index.html" class="hover:text-orange-300">Start</a>
-            <a href="about.html" class="hover:text-orange-300">Über uns</a>
-            <a href="join.html" class="hover:text-orange-300">Mitmachen</a>
-            <a href="agenda.html" class="font-semibold text-orange-400">Agenda</a>
-            <a href="gallery.html" class="hover:text-orange-300">Galerie</a>
+<body data-page="agenda">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dracheschwaenz Start"><img src="img/logo2.png" alt="Dracheschwaenz Chriens" class="brand__logo"></a>
+    <button class="nav-toggle" type="button" aria-label="Navigation oeffnen" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+    <nav class="site-nav" data-nav>
+      <a href="index.html" data-page-link="start">Start</a>
+      <a href="agenda.html" data-page-link="agenda">Termine</a>
+      <div class="nav-dropdown" data-dropdown>
+        <button class="nav-parent" type="button" data-page-group="about members videos gallery" data-dropdown-toggle>Ueber uns</button>
+        <div class="nav-menu">
+          <a href="about.html" data-page-link="about">Verein</a>
+          <a href="members.html" data-page-link="members">Mitglieder</a>
+          <a href="videos.html" data-page-link="videos">Repertoire</a>
+          <a href="gallery.html" data-page-link="gallery">Galerie</a>
         </div>
-    </div>
-</nav>
+      </div>
+      <a href="join.html" data-page-link="join">Mitglied werden</a>
+      <a href="index.html#sponsoren">Goenner werden</a>
+      <a href="mailto:dracheschwaenz@gmail.com">Kontakt</a>
+    </nav>
+  </header>
 
-<section class="mx-auto max-w-6xl px-6 py-16">
-    <div class="max-w-3xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Agenda</p>
-        <h1 class="mt-3 text-4xl font-black md:text-5xl">Was bei uns läuft</h1>
-        <p class="mt-6 text-lg leading-8 text-slate-300">
-            Auftritte und Termine machen den Verein lebendig. Für den Prototyp ist wichtig, dass Besuchende sofort
-            sehen,
-            dass die Drachenschwänz aktiv sind.
-        </p>
-    </div>
+  <main>
+    <section class="page-hero">
+      <img src="img/auftritt.png" alt="Dracheschwaenz Auftritt">
+      <div>
+        <p class="overline">Termine</p>
+        <h1>Was bei uns laeuft</h1>
+      </div>
+    </section>
 
-    <div class="mt-12 space-y-5">
-        <div class="rounded-[2rem] border border-white/10 bg-slate-900 p-6 md:flex md:items-center md:justify-between">
-            <div>
-                <p class="text-sm uppercase tracking-[0.2em] text-orange-300">15.11.2026</p>
-                <h2 class="mt-2 text-2xl font-bold">Offene Probe</h2>
-            </div>
-            <p class="mt-4 text-slate-300 md:mt-0">Chriens</p>
-        </div>
+    <section class="section term-section">
+      <p class="overline">Fasnacht 2026</p>
+      <h2>Donnerstag, 12. Februar bis Dienstag, 17. Februar 2026</h2>
+      <p class="lead">Die offizielle Website setzt Termine sehr prominent. Hier bleibt dieser Bereich klar, aber fuer den Prototyp klickbar und filterbar.</p>
+      <div class="agenda-toolbar" role="group" aria-label="Agenda filtern">
+        <button class="filter-button is-active" type="button" data-filter="all">Alle</button>
+        <button class="filter-button" type="button" data-filter="probe">Proben</button>
+        <button class="filter-button" type="button" data-filter="auftritt">Auftritte</button>
+        <button class="filter-button" type="button" data-filter="info">Info</button>
+      </div>
+      <div class="agenda-list" data-agenda-list></div>
+    </section>
+  </main>
 
-        <div class="rounded-[2rem] border border-white/10 bg-slate-900 p-6 md:flex md:items-center md:justify-between">
-            <div>
-                <p class="text-sm uppercase tracking-[0.2em] text-orange-300">04.12.2026</p>
-                <h2 class="mt-2 text-2xl font-bold">Neumitglieder-Abend</h2>
-            </div>
-            <p class="mt-4 text-slate-300 md:mt-0">Vereinslokal</p>
-        </div>
-
-        <div class="rounded-[2rem] border border-white/10 bg-slate-900 p-6 md:flex md:items-center md:justify-between">
-            <div>
-                <p class="text-sm uppercase tracking-[0.2em] text-orange-300">16.01.2027</p>
-                <h2 class="mt-2 text-2xl font-bold">Vorfasnachtsauftritt</h2>
-            </div>
-            <p class="mt-4 text-slate-300 md:mt-0">Region Luzern</p>
-        </div>
-
-        <div class="rounded-[2rem] border border-white/10 bg-slate-900 p-6 md:flex md:items-center md:justify-between">
-            <div>
-                <p class="text-sm uppercase tracking-[0.2em] text-orange-300">Fasnacht 2027</p>
-                <h2 class="mt-2 text-2xl font-bold">Auftritte in Kriens, Horw und Luzern</h2>
-            </div>
-            <p class="mt-4 text-slate-300 md:mt-0">Mehrere Standorte</p>
-        </div>
-    </div>
-</section>
-
-<footer class="border-t border-white/10 bg-slate-950 px-6 py-8 text-center text-slate-400">
-    © Drachenschwänz Chriens – Klickbarer Prototyp
-</footer>
-
+  <footer class="site-footer"><p>&copy; 2021 Dracheschw&auml;nz Chriens</p><a href="join.html">Mitglied werden</a><a href="mailto:dracheschwaenz@gmail.com">Kontakt</a></footer>
 </body>
 </html>

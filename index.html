@@ -1,153 +1,111 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Drachenschwänz – Start</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dracheschw&auml;nz Chriens | Start</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
-
-<body class="bg-slate-950 text-white font-sans">
-
-<!-- NAVBAR -->
-<nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between">
-        <a href="index.html" class="flex items-center gap-3">
-            <img src="img/logo2.png" class="h-12 hover:scale-105 transition"> <span
-                class="font-bold text-orange-400 text-lg">Drachenschwänz</span>
-        </a>
-        <div class="flex flex-wrap gap-4 text-sm md:text-base">
-            <a href="index.html" class="font-semibold text-orange-400">Start</a>
-            <a href="about.html" class="hover:text-orange-300">Über uns</a>
-            <a href="join.html" class="hover:text-orange-300">Mitmachen</a>
-            <a href="agenda.html" class="hover:text-orange-300">Agenda</a>
-            <a href="gallery.html" class="hover:text-orange-300">Galerie</a>
+<body data-page="start">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dracheschwaenz Start">
+      <img src="img/logo2.png" alt="Dracheschwaenz Chriens" class="brand__logo">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Navigation oeffnen" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+    <nav class="site-nav" data-nav>
+      <a href="index.html" data-page-link="start">Start</a>
+      <a href="agenda.html" data-page-link="agenda">Termine</a>
+      <div class="nav-dropdown" data-dropdown>
+        <button class="nav-parent" type="button" data-page-group="about members videos gallery" data-dropdown-toggle>Ueber uns</button>
+        <div class="nav-menu">
+          <a href="about.html" data-page-link="about">Verein</a>
+          <a href="members.html" data-page-link="members">Mitglieder</a>
+          <a href="videos.html" data-page-link="videos">Repertoire</a>
+          <a href="gallery.html" data-page-link="gallery">Galerie</a>
         </div>
-    </div>
-</nav>
+      </div>
+      <a href="join.html" data-page-link="join">Mitglied werden</a>
+      <a href="#sponsoren">Goenner werden</a>
+      <a href="mailto:dracheschwaenz@gmail.com">Kontakt</a>
+    </nav>
+  </header>
 
-<!-- HERO -->
-<section
-        class="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-slate-950 via-slate-900 to-orange-950">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,146,60,0.25),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(239,68,68,0.18),transparent_30%)]"></div>
-    <div class="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
-        <div>
-            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Guggenmusik aus Chriens</p>
-            <h1 class="text-4xl font-black leading-tight md:text-6xl">Jung, laut und mit viel Herzblut an der
-                Fasnacht.</h1>
-            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
-                Die Drachenschwänz sind eine junge Guggenmusik aus Chriens. Unser Prototyp zeigt die Stimmung,
-                die Gemeinschaft und vor allem den einfachen Einstieg für neue Mitglieder.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-4">
-                <a href="join.html"
-                   class="rounded-full bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Mitglied
-                    werden</a>
-                <a href="about.html"
-                   class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10">Mehr
-                    über uns</a>
-            </div>
+  <main>
+    <section class="hero hero--home">
+      <img src="img/gruppen-foto.png" alt="Dracheschwaenz Chriens an der Fasnacht">
+    </section>
+
+    <section class="intro-card">
+      <h1>Dracheschw&auml;nz Chriens</h1>
+      <p>
+        Wir sind eine junge Guggenmusik mit 55 Mitgliedern. Die Dracheschw&auml;nz Chriens haben wir 2017 im Kuonimatt Quartier gegr&uuml;ndet.
+        Wir beleben aktiv die Fasnacht in Kriens, Horw und Luzern. Mit viel Herzblut und Leidenschaft basteln wir unsere "Grende" und proben f&uuml;r die Fasnacht.
+      </p>
+    </section>
+
+    <section class="section news-section" aria-labelledby="news-title">
+      <div class="section-title">
+        <span></span>
+        <h2 id="news-title">News</h2>
+        <span></span>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="img/gruppen-foto.png" alt="Fasnacht 2026">
+          <div class="news-card__body">
+            <h3>Fasnacht 2026</h3>
+            <p>Bereits ist die Fasnacht 2026 wieder vorbei. Trotz des regnerischen Wetters genossen wir auch diese Fasnacht in vollen Zuegen.</p>
+            <a href="gallery.html">mehr sehen</a>
+          </div>
+        </article>
+        <article class="news-card">
+          <img src="img/auftritt.png" alt="Fasnachts-Programm und Sujetpin 2026">
+          <div class="news-card__body">
+            <h3>Fasnachts-Programm und Sujetpin 2026</h3>
+            <p>Unser Fasnachtsprogramm sowie der Sujetpin 2026 sind erhaeltlich. Termine und Auftritte stehen in der Agenda.</p>
+            <a href="agenda.html">zur Agenda</a>
+          </div>
+        </article>
+        <article class="news-card">
+          <img src="img/probe.png" alt="Herbst 2025">
+          <div class="news-card__body">
+            <h3>Herbst 2025</h3>
+            <p>Nach dem Grillanlass starteten wir mit Proben, Auftritten und viel Vereinsleben ins neue Jahr.</p>
+            <a href="about.html">mehr ueber uns</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section">
+      <div>
+        <p class="overline">Aus dem Konzept</p>
+        <h2>Offiziell im Look, nahbar im Einstieg.</h2>
+      </div>
+      <div class="white-panel">
+        <p>
+          Der Prototyp mischt die offizielle schwarze Website mit den bestehenden Ideen: klare Seiten, einfache Typografie, grosse Fotos, Mitmachen ohne Huerden und Inhalte fuer neue Interessierte.
+        </p>
+        <div class="panel-actions">
+          <a class="button" href="join.html">Mitglied werden</a>
+          <a class="button button--outline-dark" href="about.html">Ueber uns</a>
         </div>
+      </div>
+    </section>
 
-        <div class="grid gap-4 sm:grid-cols-2">
-            <div class="flex justify-center">
-                <img
-                        src="img/gruppen-foto.png"
-                        alt="Drachenschwänz Fasnacht"
-                        class="rounded-3xl shadow-2xl"
-                />
-            </div>
-            <div class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-                <p class="text-sm uppercase tracking-[0.2em] text-orange-300">Gegründet</p>
-                <h2 class="mt-3 text-3xl font-bold">2017</h2>
-                <p class="mt-3 text-sm leading-6 text-slate-300">Aus dem Quartier heraus entstanden und seither stetig
-                    gewachsen.</p>
-            </div>
+    <section class="section sponsors-section" id="sponsoren">
+      <p class="overline">Sponsoren</p>
+      <h2>Unterstuetzt von Menschen aus der Region</h2>
+      <img class="sponsor-board" src="img/sponsoren.png" alt="Sponsoren der Dracheschwaenz Chriens">
+    </section>
+  </main>
 
-            <div class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-                <p class="text-sm uppercase tracking-[0.2em] text-orange-300">Mitglieder</p>
-                <h2 class="mt-3 text-3xl font-bold">Junge Crew</h2>
-                <p class="mt-3 text-sm leading-6 text-slate-300">Musik, Fasnacht und Teamgeist stehen bei uns im
-                    Zentrum.</p>
-            </div>
-
-            <div class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur sm:col-span-2">
-                <p class="text-sm uppercase tracking-[0.2em] text-orange-300">Aktiv unterwegs</p>
-                <h2 class="mt-3 text-2xl font-bold">Kriens, Horw und Luzern</h2>
-                <p class="mt-3 text-sm leading-6 text-slate-300">Wir beleben die Fasnacht mit Auftritten, Proben,
-                    Bastelarbeit und viel Leidenschaft.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- QUICK LINKS -->
-<section class="mx-auto max-w-6xl px-6 py-16">
-    <div class="mb-10 text-center">
-        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">Schnell finden</p>
-        <h2 class="mt-3 text-3xl font-bold md:text-4xl">Was Besucherinnen und Besucher sofort sehen sollen</h2>
-    </div>
-
-    <div class="grid gap-6 md:grid-cols-3">
-        <a href="join.html"
-           class="rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-orange-400">
-            <h3 class="text-xl font-bold text-orange-300">Mitmachen</h3>
-            <p class="mt-3 leading-7 text-slate-300">Ideal für neue Interessierte: klar, einfach und ohne Hürden
-                erklärt.</p>
-        </a>
-
-        <a href="agenda.html"
-           class="rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-orange-400">
-            <h3 class="text-xl font-bold text-orange-300">Auftritte & Termine</h3>
-            <p class="mt-3 leading-7 text-slate-300">Damit sofort sichtbar wird, dass bei uns etwas läuft.</p>
-        </a>
-
-        <a href="gallery.html"
-           class="rounded-3xl border border-white/10 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-orange-400">
-            <h3 class="text-xl font-bold text-orange-300">Fasnachtsstimmung</h3>
-            <p class="mt-3 leading-7 text-slate-300">Bilder transportieren Stimmung und machen Lust, dabei zu sein.</p>
-        </a>
-    </div>
-</section><!-- STORY STRIP -->
-<section class="bg-white text-slate-900">
-    <div class="mx-auto grid max-w-6xl gap-8 px-6 py-16 md:grid-cols-3">
-        <div class="rounded-3xl bg-orange-50 p-6">
-            <img src="img/auftritt.png" class="rounded-xl mb-4">
-            <h3 class="text-xl font-bold">🎺 Musik</h3>
-            <p class="mt-3 leading-7 text-slate-700">
-                Von Proben bis zu grossen Auftritten – wir machen Guggenmusik mit Energie.
-            </p>
-        </div>
-        <div class="rounded-3xl bg-orange-50 p-6">
-            <img src="img/gruppen-foto.png" class="rounded-xl mb-4">
-            <h3 class="text-xl font-bold">🎭 Fasnacht 2026</h3>
-            <p class="mt-3 leading-7 text-slate-700">Unsere Kostüme, Grenden und Auftritte gehören genauso dazu wie der
-                Sound.</p>
-        </div>
-        <div class="rounded-3xl bg-orange-50 p-6">
-            <img src="img/probe.png" class="rounded-xl mb-4">
-            <h3 class="text-xl font-bold">👥 Gemeinschaft</h3>
-            <p class="mt-3 leading-7 text-slate-700">Neue Leute kennenlernen, zusammen wachsen und gemeinsam etwas
-                erleben.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="mx-auto max-w-6xl px-6 py-16">
-    <div class="rounded-[2rem] border border-orange-500/20 bg-gradient-to-r from-orange-500 to-red-500 px-8 py-12 text-center shadow-2xl">
-        <h2 class="text-3xl font-black md:text-4xl">Lust, bei uns reinzuschauen?</h2>
-        <p class="mx-auto mt-4 max-w-2xl text-lg text-orange-50">Ob mit Erfahrung oder ganz neu: Bei uns soll der
-            Einstieg unkompliziert und sympathisch wirken.</p>
-        <a href="join.html"
-           class="mt-8 inline-block rounded-full bg-black px-8 py-3 font-semibold text-white transition hover:bg-slate-900">Jetzt
-            mehr erfahren</a>
-    </div>
-</section>
-
-<footer class="border-t border-white/10 bg-slate-950 px-6 py-8 text-center text-slate-400">
-    © Drachenschwänz Chriens – Klickbarer Prototyp
-</footer>
-
+  <footer class="site-footer">
+    <p>&copy; 2021 Dracheschw&auml;nz Chriens</p>
+    <a href="join.html">Mitglied werden</a>
+    <a href="mailto:dracheschwaenz@gmail.com">Kontakt</a>
+  </footer>
 </body>
 </html>

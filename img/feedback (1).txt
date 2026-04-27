@@ -1,0 +1,19 @@
+Kurzfazit
+Deine Abgabe ist insgesamt gut gelungen. Aufgabe 2 und 3 sind überzeugend beantwortet. Bei Aufgabe 1 fällt aber auf, dass die API-Antwort nicht dem erwarteten Muster aus der Aufgabe entspricht.
+
+Aufgabe 1: teilweise
+Hinweis: Die Erklärungen zu Konfiguration und Port-Mapping sind richtig. Prüfe aber die eigentliche API-Antwort nochmals: Erwartet war die Ausgabe mit deinem Namen im vorgegebenen Satz, nicht nur "Hello Lucy".
+
+Aufgabe 2: korrekt
+Hinweis: Labels sowie ARG und ENV hast du sinnvoll erklärt. Der JSON-Block ist vorhanden und passt grundsätzlich.
+
+Aufgabe 3: korrekt
+Hinweis: Cache und .dockerignore hast du verständlich erklärt. Die Beispiele für ignorierte Ordner sind passend.
+
+Bonus: fehlt
+Hinweis: Die Bonusfrage wurde nicht beantwortet.
+
+3 nächste Schritte
+- Prüfe bei Aufgabe 1 nochmals die konkrete API-Ausgabe.
+- Ergänze den Bonus in 1–2 Sätzen.
+- Achte weiterhin darauf, technische Begriffe kurz und präzis zu erklären.

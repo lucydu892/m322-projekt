@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dracheschw&auml;nz Chriens | Prototyp</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="start">
+  <header class="site-header">
+    <a class="brand" href="prototype.html" aria-label="Dracheschwaenz Start">
+      <img src="img/logo2.png" alt="Dracheschwaenz Chriens" class="brand__logo">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Navigation oeffnen" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+    <nav class="site-nav" data-nav>
+      <a href="prototype.html" data-page-link="start">Start</a>
+      <a href="agenda.html" data-page-link="agenda">Termine</a>
+      <div class="nav-dropdown" data-dropdown>
+        <button class="nav-parent" type="button" data-page-group="about members videos gallery" data-dropdown-toggle>Ueber uns</button>
+        <div class="nav-menu">
+          <a href="about.html" data-page-link="about">Verein</a>
+          <a href="members.html" data-page-link="members">Mitglieder</a>
+          <a href="videos.html" data-page-link="videos">Repertoire</a>
+          <a href="gallery.html" data-page-link="gallery">Galerie</a>
+        </div>
+      </div>
+      <a href="join.html" data-page-link="join">Mitglied werden</a>
+      <a href="index.html#sponsoren">Goenner werden</a>
+      <a href="mailto:dracheschwaenz@gmail.com">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--home">
+      <img src="img/gruppen-foto.png" alt="Dracheschwaenz Chriens an der Fasnacht">
+    </section>
+    <section class="intro-card">
+      <h1>Dracheschw&auml;nz Chriens</h1>
+      <p>
+        Wir sind eine junge Guggenmusik mit 55 Mitgliedern. Die Dracheschw&auml;nz Chriens haben wir 2017 im Kuonimatt Quartier gegr&uuml;ndet.
+        Wir beleben aktiv die Fasnacht in Kriens, Horw und Luzern. Mit viel Herzblut und Leidenschaft basteln wir unsere "Grende" und proben f&uuml;r die Fasnacht.
+      </p>
+    </section>
+    <section class="section news-section" aria-labelledby="news-title">
+      <div class="section-title"><span></span><h2 id="news-title">News</h2><span></span></div>
+      <div class="news-grid">
+        <article class="news-card"><img src="img/gruppen-foto.png" alt="Fasnacht 2026"><div class="news-card__body"><h3>Fasnacht 2026</h3><p>Bereits ist die Fasnacht 2026 wieder vorbei. Mit dem Sujet "Trank der Goetter" zogen wir durch die Luzerner Altstadt.</p><a href="gallery.html">mehr sehen</a></div></article>
+        <article class="news-card"><img src="img/auftritt.png" alt="Fasnachts-Programm"><div class="news-card__body"><h3>Fasnachts-Programm und Sujetpin 2026</h3><p>Programm, Sujetpin und Termine werden schnell auffindbar gemacht.</p><a href="agenda.html">zur Agenda</a></div></article>
+        <article class="news-card"><img src="img/probe.png" alt="Herbst 2025"><div class="news-card__body"><h3>Herbst 2025</h3><p>Proben, Auftritte und Vereinsleben zeigen, dass auch ausserhalb der Fasnacht etwas laeuft.</p><a href="about.html">mehr ueber uns</a></div></article>
+      </div>
+    </section>
+    <section class="section split-section">
+      <div><p class="overline">Aus dem Konzept</p><h2>Offiziell im Look, nahbar im Einstieg.</h2></div>
+      <div class="white-panel"><p>Der Prototyp mischt die offizielle schwarze Website mit den bestehenden Ideen: klare Seiten, einfache Typografie, grosse Fotos und ein einfacher Einstieg fuer neue Mitglieder.</p><div class="panel-actions"><a class="button" href="join.html">Mitglied werden</a><a class="button button--outline-dark" href="about.html">Ueber uns</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2021 Dracheschw&auml;nz Chriens</p>
+    <a href="join.html">Mitglied werden</a>
+    <a href="mailto:dracheschwaenz@gmail.com">Kontakt</a>
+  </footer>
+</body>
+</html>

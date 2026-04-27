@@ -1,0 +1,22 @@
+Kurzfazit
+Gute und verständliche Lösung. Die Hauptteile stimmen; einzig der Bonus fehlt.
+
+Teil A – Grundverständnis
+korrekt – Registry, latest und die Grundbegriffe sind richtig beschrieben.
+
+Teil B – Arbeiten mit dem Skript
+korrekt – Suche, Official Image, Pull und Tagging sind passend beantwortet.
+
+Teil C – Sicherheit & Bewertung
+korrekt – Herkunft, Dockerfile, feste Version und Root-Risiko sind stimmig erklärt.
+
+Teil D – Reflexion
+korrekt – config.json sowie Push/Pull sind verständlich beantwortet.
+
+Bonus
+fehlt – Die Erklärung zu «Layer already exists» fehlt noch.
+
+3 nächste Schritte
+- Bonus noch ergänzen.
+- Bei config.json zusätzlich erwähnen, dass oft Token oder Auth-Daten gespeichert werden.
+- Sicherheitsfragen weiter mit konkreten Beispielen beantworten.
