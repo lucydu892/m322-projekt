@@ -50,12 +50,14 @@ document.querySelectorAll<HTMLButtonElement>("[data-dropdown-toggle]").forEach((
 
 navToggle?.addEventListener("click", () => {
   const isOpen = nav?.classList.toggle("is-open") ?? false;
+  navToggle.classList.toggle("is-open", isOpen);
   navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
 nav?.addEventListener("click", (event) => {
   if ((event.target as HTMLElement).matches("a")) {
     nav.classList.remove("is-open");
+    navToggle?.classList.remove("is-open");
     navToggle?.setAttribute("aria-expanded", "false");
     dropdowns.forEach((item) => item.classList.remove("is-open"));
   }
