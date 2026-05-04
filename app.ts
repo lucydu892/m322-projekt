@@ -24,7 +24,9 @@ const labels: Record<AgendaKind, string> = {
 const page = document.body.dataset.page;
 const navToggle = document.querySelector<HTMLButtonElement>("[data-nav-toggle]");
 const nav = document.querySelector<HTMLElement>("[data-nav]");
-const dropdowns = Array.from(document.querySelectorAll<HTMLElement>("[data-dropdown]"));
+const dropdowns = ([] as HTMLElement[]).slice.call(
+  document.querySelectorAll<HTMLElement>("[data-dropdown]")
+);
 
 document.querySelectorAll<HTMLElement>("[data-page-link]").forEach((link) => {
   link.classList.toggle("is-active", link.dataset.pageLink === page);
@@ -32,7 +34,7 @@ document.querySelectorAll<HTMLElement>("[data-page-link]").forEach((link) => {
 
 document.querySelectorAll<HTMLButtonElement>("[data-page-group]").forEach((button) => {
   const group = button.dataset.pageGroup?.split(" ") ?? [];
-  button.classList.toggle("is-active", Boolean(page && group.includes(page)));
+  button.classList.toggle("is-active", Boolean(page && group.indexOf(page) !== -1));
 });
 
 document.querySelectorAll<HTMLButtonElement>("[data-dropdown-toggle]").forEach((button) => {
@@ -70,7 +72,9 @@ document.addEventListener("click", (event) => {
 });
 
 const agendaList = document.querySelector<HTMLElement>("[data-agenda-list]");
-const filterButtons = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-filter]"));
+const filterButtons = ([] as HTMLButtonElement[]).slice.call(
+  document.querySelectorAll<HTMLButtonElement>("[data-filter]")
+);
 
 function renderAgenda(filter: AgendaKind | "all" = "all"): void {
   if (!agendaList) return;

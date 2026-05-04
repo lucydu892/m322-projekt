@@ -1,14 +1,3 @@
-async function loadNavbar() {
-  const response = await fetch('navbar.html');
-
-  if (!response.ok) {
-    throw new Error(`Failed to load navbar: ${response.status}`);
-  }
-
-  const navbarHTML = await response.text();
-  document.body.insertAdjacentHTML('afterbegin', navbarHTML);
-}
-
 const agendaEvents = [
   { date: '12.02.2026', title: 'Start Fasnacht 2026', place: 'Kriens', kind: 'auftritt' },
   { date: '13.02.2026', title: 'Fasnachtsprogramm und Sujetpin', place: 'Luzern', kind: 'info' },
@@ -23,17 +12,11 @@ const labels = {
   info: 'Info'
 };
 
-async function init() {
-  try {
-    await loadNavbar();
-  } catch (error) {
-    console.error('Error loading navbar:', error);
-  }
-
+function init() {
   const page = document.body.dataset.page;
   const navToggle = document.querySelector('[data-nav-toggle]');
   const nav = document.querySelector('[data-nav]');
-  const dropdowns = Array.from(document.querySelectorAll('[data-dropdown]'));
+  const dropdowns = [].slice.call(document.querySelectorAll('[data-dropdown]'));
 
   document.querySelectorAll('[data-page-link]').forEach((link) => {
     link.classList.toggle('is-active', link.dataset.pageLink === page);
@@ -41,7 +24,7 @@ async function init() {
 
   document.querySelectorAll('[data-page-group]').forEach((button) => {
     const group = button.dataset.pageGroup?.split(' ') ?? [];
-    button.classList.toggle('is-active', Boolean(page && group.includes(page)));
+    button.classList.toggle('is-active', Boolean(page && group.indexOf(page) !== -1));
   });
 
   document.querySelectorAll('[data-dropdown-toggle]').forEach((button) => {
@@ -79,7 +62,7 @@ async function init() {
   });
 
   const agendaList = document.querySelector('[data-agenda-list]');
-  const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
+  const filterButtons = [].slice.call(document.querySelectorAll('[data-filter]'));
 
   function renderAgenda(filter = 'all') {
     if (!agendaList) return;
