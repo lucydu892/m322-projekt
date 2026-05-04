@@ -11,7 +11,11 @@ const labels = {
   auftritt: 'Auftritt',
   info: 'Info'
 };
-
+fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
 function init() {
   const page = document.body.dataset.page;
   const navToggle = document.querySelector('[data-nav-toggle]');
