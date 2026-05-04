@@ -178,6 +178,10 @@ textarea {
   object-fit: cover;
 }
 
+.page-hero--screenshot img {
+  object-position: center 68%;
+}
+
 .hero img {
   object-position: center 34%;
 }

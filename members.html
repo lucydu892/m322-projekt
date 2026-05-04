@@ -9,9 +9,32 @@
 </head>
 <body data-page="members">
 
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Dracheschwaenz Start">
+    <img src="img/logo2.png" alt="Dracheschwänz Chriens" class="brand__logo">
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Navigation oeffnen" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
+  <nav class="site-nav" data-nav>
+    <a href="index.html" data-page-link="start">Start</a>
+    <a href="agenda.html" data-page-link="agenda">Termine</a>
+    <div class="nav-dropdown" data-dropdown>
+      <button class="nav-parent" type="button" data-page-group="about members videos gallery" data-dropdown-toggle>Über uns</button>
+      <div class="nav-menu">
+        <a href="about.html" data-page-link="about">Verein</a>
+        <a href="members.html" data-page-link="members">Mitglieder</a>
+        <a href="videos.html" data-page-link="videos">Repertoire</a>
+        <a href="gallery.html" data-page-link="gallery">Galerie</a>
+      </div>
+    </div>
+    <a href="join.html" data-page-link="join">Mitglied werden</a>
+    <a href="goenner.html" data-page-link="goenner">Gönner werden</a>
+    <a href="mailto:dracheschwaenz@gmail.com">Kontakt</a>
+  </nav>
+</header>
+
   <main>
-    <section class="page-hero">
-      <img src="img/gruppen-foto.png" alt="Unsere Mitglieder">
+    <section class="page-hero page-hero--screenshot">
+      <img src="img/mitglieder.avif" alt="Unsere Mitglieder">
       <div>
         <p class="overline">Über uns</p>
         <h1>Unsere Mitglieder</h1>
