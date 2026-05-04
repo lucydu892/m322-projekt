@@ -1,3 +1,21 @@
+// Load navbar
+async function loadNavbar() {
+  try {
+    const response = await fetch('navbar.html');
+    const navbarHTML = await response.text();
+    document.body.insertAdjacentHTML('afterbegin', navbarHTML);
+  } catch (error) {
+    console.error('Error loading navbar:', error);
+  }
+}
+
+// Load navbar before other scripts run
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadNavbar);
+} else {
+  loadNavbar();
+}
+
 const agendaEvents = [
   { date: "12.02.2026", title: "Start Fasnacht 2026", place: "Kriens", kind: "auftritt" },
   { date: "13.02.2026", title: "Fasnachtsprogramm und Sujetpin", place: "Luzern", kind: "info" },
